@@ -1,0 +1,51 @@
+@import '../../scss/colors';
+
+.group {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.composeButton{
+  margin-left: 0.5em;
+  color: $black;
+  background: $off-white;
+  border: 1px solid $grey;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button {
+  composes: composeButton;
+  font-family: 'Open Sans Condensed', sans-serif; 
+  font-weight: 700; 
+  text-transform: uppercase; 
+}
+
+.primary {
+  composes: button;
+  color: $white;
+  background: $blue;
+  border-color: $blue;
+}
+
+.danger{
+  composes: button;
+  color: $white;
+  background: $orange;
+  border-color: $orange;
+}
+
+.link{
+  composes: composeButton;
+  background: none;
+  color: $orange;
+  text-decoration: underline;
+  border: 0;
+  outline: none;
+}
+
+.link:hover{
+  color: darken($orange, 5%);
+}

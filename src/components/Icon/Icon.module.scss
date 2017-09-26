@@ -1,0 +1,74 @@
+@import '../../scss/colors';
+
+.icon{
+  display: inline
+}
+
+.icon svg {
+  position: relative;
+  top: 0.1em;
+  height: 1em;
+  width: 1em;
+  fill: $black;
+}
+
+.redDie svg{
+  position: relative;
+  top: 0.1em;
+  height: 1em;
+  width: 1em;
+  fill: $red;
+  color: $red;
+}
+
+.blackDie svg{
+  position: relative;
+  top: 0.1em;
+  height: 1em;
+  width: 1em;
+  fill: $black;
+  color: $black;
+  
+}
+
+.whiteDie svg{
+  position: relative;
+  top: 0.1em;
+  height: 1em;
+  width: 1em;
+  fill: $white;
+  color: $black;
+}
+
+.redDefense svg{
+  position: relative;
+  top: 0.1em;
+  height: 1em;
+  width: 1em;
+  fill: $red;
+  color: $white;
+}
+
+.wounds svg {
+  position: relative;
+  top: 0.1em;
+  height: 1em;
+  width: 1em;
+  fill: $green;
+}
+
+.armor svg {
+  position: relative;
+  top: 0.1em;
+  height: 1em;
+  width: 1em;
+  fill: $yellow;
+}
+
+.courage svg {
+  position: relative;
+  top: 0.1em;
+  height: 1em;
+  width: 1em;
+  fill: $yellow;
+}

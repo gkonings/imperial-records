@@ -1,0 +1,19 @@
+@import '../../scss/colors';
+
+.input {
+  padding: 0.5em;
+  width: calc(100% - calc(1em + 2px));
+  background-color: white;
+  border: 1px solid $grey;
+  outline: none;
+}
+
+.input[type='checkbox'] {
+  width: auto;
+}
+
+.textarea {
+  composes: input;
+  resize: vertical;
+
+}

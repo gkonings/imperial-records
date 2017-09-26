@@ -1,0 +1,29 @@
+.grid{
+  display: grid;
+}
+
+.gridAdmin{
+  composes: grid;
+  grid-template-columns: 275px 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header"
+    "list preview preview"
+    "list form form"
+}
+
+.header{
+  grid-area: header;
+}
+
+.list{
+  grid-area: list;
+}
+
+.form{
+  grid-area: form;
+}
+
+.preview{
+  grid-area: preview;
+}

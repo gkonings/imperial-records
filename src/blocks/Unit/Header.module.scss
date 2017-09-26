@@ -1,0 +1,82 @@
+@import '../../scss/colors';
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.3em;
+  font-size: 1em;
+  height: 2.5em;
+}
+
+.header header{
+  margin-top: 0.3em;
+}
+
+.header h4,
+.header h5,
+.header h6 {
+  margin: 0;
+  color: $white;
+}
+
+.header h4 {
+  line-height: 1em;
+}
+.header h6 {
+  line-height: 1em;
+}
+
+.header svg{
+  fill: $white;
+}
+
+.faction {
+  text-align: left;
+  font-size: 2em;
+  width: 1.5em;
+}
+
+.name {
+  text-align: left;
+  flex: 0 1 100%;
+}
+
+.rankSize{
+  flex: 0 1 2em;
+  text-align: right;
+  
+  height: 2.5em;
+}
+
+.rankSizeRebel{
+  composes: rankSize;
+  background-color: $orange;
+}
+
+.rankSizeEmpire{
+  composes: rankSize;
+  background-color: $blue;
+}
+.rank{
+  width: 100%;
+  height: 1.3em;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.size{
+  width: 100%;
+  height: 1.2em;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.points {
+  flex: 0 1 2em;
+  text-align: right;
+  font-family: 'Open Sans Condensed', sans-serif; 
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin: 0.05em 0.3em;
+  font-weight: 700;
+}

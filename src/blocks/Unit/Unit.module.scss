@@ -1,0 +1,32 @@
+@import '../../scss/colors';
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header"
+    "skills stats"
+    "weapons weapons"
+    "upgrades upgrades"
+}
+
+.header{
+  grid-area: header;
+  background: $black;
+  color: $white;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.skills{
+  grid-area: skills;
+}
+.stats{
+  grid-area: stats;
+}
+.weapons{
+  grid-area: weapons;
+}
+.upgrades{
+  grid-area: upgrades;
+}
