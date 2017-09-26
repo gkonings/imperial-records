@@ -2,10 +2,11 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { reduxForm, Field, FieldArray } from 'redux-form'
 
+import { Button, ButtonGroup } from 'components/common'
+
 import {
-  Block,
-  ButtonGroup,
-  Button } from '../../components'
+  Block } from '../../components'
+
 import {
   Form,
   Input,
@@ -144,15 +145,17 @@ const UnitForm = ({unit, ...props}) => {
 
         <ButtonGroup>
           {unit &&
-          <Button link confirm
+          <Button
+            value='Delete'
+            link confirm
             confirmMessage={`Are you sure you want to delete ${unit.name}?`}
             onClick={() => { props.deleteUnit(unit) }}>
               Delete
           </Button>}
 
           {unit
-          ? <Button type='submit' color='primary'>Update</Button>
-          : <Button type='submit' color='primary'>Add</Button>}
+          ? <Button value='Update' type='submit' color='primary'>Update</Button>
+          : <Button value='Add' type='submit' color='primary'>Add</Button>}
         </ButtonGroup>
 
       </Form>

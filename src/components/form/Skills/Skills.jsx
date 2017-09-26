@@ -1,8 +1,9 @@
 import React from 'react'
 
+import { Button, ButtonGroup } from 'components/common'
+
 import InputContainer from '../common/InputContainer'
 import Skill from './Skill'
-import { ButtonGroup, Button } from '../../'
 import styles from './Skills.module.scss'
 
 const Skills = ({fields, meta, ...props}) => {
@@ -18,9 +19,8 @@ const Skills = ({fields, meta, ...props}) => {
         </ul>
         <ButtonGroup>
           <Button
-            onClick={() => fields.push({})}>
-         Add Skill
-         </Button>
+            value='Add Skill'
+            onClick={() => fields.push({})} />
         </ButtonGroup>
       </InputContainer>
     </div>

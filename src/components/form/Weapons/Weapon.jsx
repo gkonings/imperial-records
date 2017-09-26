@@ -1,9 +1,10 @@
 import React from 'react'
 import { Field } from 'redux-form'
 
+import { Button, ButtonGroup } from 'components/common'
+
 import { Input, Dice, Range, Textarea } from '../'
 
-import { ButtonGroup, Button } from '../../'
 import styles from './Weapons.module.scss'
 
 const Weapon = ({weapon, ...props}) => {
@@ -39,11 +40,10 @@ const Weapon = ({weapon, ...props}) => {
 
       <ButtonGroup>
         <Button
+          value='remove'
           link
           color='danger'
-          onClick={props.remove}>
-           remove
-        </Button>
+          onClick={props.remove} />
       </ButtonGroup>
     </li>
   )

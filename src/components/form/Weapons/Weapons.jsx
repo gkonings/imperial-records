@@ -1,8 +1,9 @@
 import React from 'react'
 
+import { Button, ButtonGroup } from 'components/common'
+
 import InputContainer from '../common/InputContainer'
 import Weapon from './Weapon'
-import { ButtonGroup, Button } from '../../'
 import styles from './Weapons.module.scss'
 
 const Weapons = ({fields, meta, ...props}) => {
@@ -18,9 +19,8 @@ const Weapons = ({fields, meta, ...props}) => {
         </ul>
         <ButtonGroup>
           <Button
-            onClick={() => fields.push({})}>
-         Add Weapon
-         </Button>
+            value='remove'
+            onClick={() => fields.push({})} />
         </ButtonGroup>
       </InputContainer>
     </div>

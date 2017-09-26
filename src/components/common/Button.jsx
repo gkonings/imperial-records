@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Confirm from '../modal/Confirm'
+import Confirm from 'components/modal/Confirm'
 import styles from './Button.module.scss'
 
 class Button extends Component {
@@ -38,7 +38,7 @@ class Button extends Component {
   }
 
   render () {
-    const {type, link, confirm, confirmMessage, ...props} = this.props
+    const {value, type, link, confirm, confirmMessage, ...props} = this.props
     const {confirmOpen} = this.state
 
     return (
@@ -50,7 +50,7 @@ class Button extends Component {
           onClick={confirm
             ? this.confirmOpen
             : props.onClick}>
-          {props.children}
+          {value}
         </button>
         {confirm &&
         <Confirm

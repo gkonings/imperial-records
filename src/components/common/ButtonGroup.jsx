@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './Button.module.scss'
+import styles from './ButtonGroup.module.scss'
 
 const ButtonGroup = (props) => {
   return (

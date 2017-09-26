@@ -1,9 +1,10 @@
 import React from 'react'
 import { Field } from 'redux-form'
 
+import { Button, ButtonGroup } from 'components/common'
+
 import Input from '../Input'
 import Textarea from '../Textarea'
-import { ButtonGroup, Button } from '../../'
 import styles from './Skills.module.scss'
 
 const Skill = ({skill, ...props}) => {
@@ -29,6 +30,7 @@ const Skill = ({skill, ...props}) => {
 
       <ButtonGroup>
         <Button
+          value='remove'
           link
           color='danger'
           onClick={props.remove}>
