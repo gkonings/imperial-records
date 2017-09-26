@@ -1,6 +1,6 @@
-import database from '../database'
-import * as unitActions from '../../constants/unitActions'
-import { toArray } from '../helpers/toArray'
+import database from 'config/database'
+import * as unitActions from 'constants/unitActions'
+import { toArray } from 'services/firebase/toArray'
 
 const getUnits = (livereload) => {
   return livereload ? on() : once()

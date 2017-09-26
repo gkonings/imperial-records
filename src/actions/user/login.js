@@ -1,5 +1,5 @@
-import { auth, provider } from '../database'
-import * as userActions from '../../constants/userActions'
+import { auth, provider } from 'config/database'
+import * as userActions from 'constants/userActions'
 
 const login = () => {
   return dispatch => {

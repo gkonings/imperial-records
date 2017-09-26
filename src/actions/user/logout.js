@@ -1,5 +1,5 @@
-import { auth } from '../database'
-import * as userActions from '../../constants/userActions'
+import { auth } from 'config/database'
+import * as userActions from 'constants/userActions'
 
 const logout = () => {
   return dispatch => {

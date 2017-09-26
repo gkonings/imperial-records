@@ -3,11 +3,10 @@ import createHistory from 'history/createBrowserHistory'
 import { routerMiddleware } from 'react-router-redux'
 import thunk from 'redux-thunk'
 
-import rootReducer from './reducers'
-
-import { defaultState as user } from './reducers/user'
-import { defaultState as units } from './reducers/units'
-import { defaultState as admin } from './reducers/admin'
+import rootReducer from 'reducers'
+import { defaultState as user } from 'reducers/user'
+import { defaultState as units } from 'reducers/units'
+import { defaultState as admin } from 'reducers/admin'
 
 const defaultState = {
   user,

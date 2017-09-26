@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Button } from '../../components'
+import { Button } from 'components'
 import styles from './Header.module.scss'
 
 const Header = (props) => {

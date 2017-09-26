@@ -1,28 +1,28 @@
-'use strict';
+'use strict'
 
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
-const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
-const eslintFormatter = require('react-dev-utils/eslintFormatter');
-const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
-const getClientEnvironment = require('./env');
-const paths = require('./paths');
-const getCustomConfig = require('./custom-react-scripts/config');
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
+const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin')
+const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin')
+const eslintFormatter = require('react-dev-utils/eslintFormatter')
+const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin')
+const getClientEnvironment = require('./env')
+const paths = require('./paths')
+const getCustomConfig = require('./custom-react-scripts/config')
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
-const publicPath = '/';
+const publicPath = '/'
 // `publicUrl` is just like `publicPath`, but we will provide it to our app
 // as %PUBLIC_URL% in `index.html` and `process.env.PUBLIC_URL` in JavaScript.
 // Omit trailing slash as %PUBLIC_PATH%/xyz looks better than %PUBLIC_PATH%xyz.
-const publicUrl = '';
+const publicUrl = ''
 // Get environment variables to inject into our app.
-const env = getClientEnvironment(publicUrl);
-//Get custom configuration for injecting plugins, presets and loaders
-const customConfig = getCustomConfig(true);
+const env = getClientEnvironment(publicUrl)
+// Get custom configuration for injecting plugins, presets and loaders
+const customConfig = getCustomConfig(true)
 
 // This is the development configuration.
 // It is focused on developer experience and fast rebuilds.
@@ -51,7 +51,7 @@ module.exports = {
     // Errors should be considered fatal in development
     require.resolve('react-error-overlay'),
     // Finally, this is your app's code:
-    paths.appIndexJs,
+    paths.appIndexJs
     // We include the app code last so that if there is a runtime error during
     // initialization, it doesn't blow up the WebpackDevServer client, and
     // changing JS code would still trigger a refresh.
@@ -71,14 +71,14 @@ module.exports = {
     publicPath: publicPath,
     // Point sourcemap entries to original disk location (format as URL on Windows)
     devtoolModuleFilenameTemplate: info =>
-      path.resolve(info.absoluteResourcePath).replace(/\\/g, '/'),
+      path.resolve(info.absoluteResourcePath).replace(/\\/g, '/')
   },
   resolve: {
     // This allows you to set a fallback for where Webpack should look for modules.
     // We placed these paths second because we want `node_modules` to "win"
     // if there are any conflicts. This matches Node resolution mechanism.
     // https://github.com/facebookincubator/create-react-app/issues/253
-    modules: ['node_modules', paths.appNodeModules].concat(
+    modules: ['node_modules', paths.appNodeModules, paths.appSrc].concat(
       // It is guaranteed to exist because we tweak it in `env.js`
       process.env.NODE_PATH.split(path.delimiter).filter(Boolean)
     ),
@@ -90,10 +90,10 @@ module.exports = {
     // for React Native Web.
     extensions: ['.web.js', '.js', '.json', '.web.jsx', '.jsx'],
     alias: {
-      
+
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
-      'react-native': 'react-native-web',
+      'react-native': 'react-native-web'
     },
     plugins: [
       // Prevents users from importing files from outside of src/ (or node_modules/).
@@ -101,8 +101,8 @@ module.exports = {
       // To fix this, we prevent you from importing files out of src/ -- if you'd like to,
       // please link the files into your node_modules/ and let module-resolution kick in.
       // Make sure your source files are compiled, as they will not be processed in any way.
-      new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
-    ],
+      new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson])
+    ]
   },
   module: {
     strictExportPresence: true,
@@ -120,13 +120,13 @@ module.exports = {
           {
             options: {
               formatter: eslintFormatter,
-              eslintPath: require.resolve('eslint'),
-              
+              eslintPath: require.resolve('eslint')
+
             },
-            loader: require.resolve('eslint-loader'),
-          },
+            loader: require.resolve('eslint-loader')
+          }
         ],
-        include: paths.appSrc,
+        include: paths.appSrc
       },
       {
         // "oneOf" will traverse all following loaders until one will
@@ -141,8 +141,8 @@ module.exports = {
             loader: require.resolve('url-loader'),
             options: {
               limit: 10000,
-              name: 'static/media/[name].[hash:8].[ext]',
-            },
+              name: 'static/media/[name].[hash:8].[ext]'
+            }
           },
           // Process JS with Babel.
           {
@@ -158,8 +158,8 @@ module.exports = {
               // This is a feature of `babel-loader` for webpack (not Babel itself).
               // It enables caching results in ./node_modules/.cache/babel-loader/
               // directory for faster rebuilds.
-              cacheDirectory: true,
-            },
+              cacheDirectory: true
+            }
           },
           ...customConfig.webpackLoaders,
           // "file" loader makes sure those assets get served by WebpackDevServer.
@@ -175,14 +175,14 @@ module.exports = {
             exclude: [/\.js$/, /\.html$/, /\.json$/],
             loader: require.resolve('file-loader'),
             options: {
-              name: 'static/media/[name].[hash:8].[ext]',
-            },
-          },
-        ],
-      },
+              name: 'static/media/[name].[hash:8].[ext]'
+            }
+          }
+        ]
+      }
       // ** STOP ** Are you adding a new loader?
       // Make sure to add the new loader(s) before the "file" loader.
-    ],
+    ]
   },
   plugins: [
     // Makes some environment variables available in index.html.
@@ -193,7 +193,7 @@ module.exports = {
     // Generates an `index.html` file with the <script> injected.
     new HtmlWebpackPlugin({
       inject: true,
-      template: paths.appHtml,
+      template: paths.appHtml
     }),
     // Add module names to factory functions so they appear in browser profiler.
     new webpack.NamedModulesPlugin(),
@@ -217,7 +217,7 @@ module.exports = {
     // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
     // You can remove this if you don't use Moment.js:
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-    ...customConfig.webpackPlugins,
+    ...customConfig.webpackPlugins
   ],
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.
@@ -225,12 +225,12 @@ module.exports = {
     dgram: 'empty',
     fs: 'empty',
     net: 'empty',
-    tls: 'empty',
+    tls: 'empty'
   },
   // Turn off performance hints during development because we don't do any
   // splitting or minification in interest of speed. These warnings become
   // cumbersome.
   performance: {
-    hints: false,
-  },
-};
+    hints: false
+  }
+}

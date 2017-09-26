@@ -1,5 +1,5 @@
-import database from '../database'
-import * as unitActions from '../../constants/unitActions'
+import database from 'config/database'
+import * as unitActions from 'constants/unitActions'
 
 const addUnit = (unit) => {
   return dispatch => {

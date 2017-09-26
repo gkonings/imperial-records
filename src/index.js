@@ -5,7 +5,7 @@ import registerServiceWorker from './registerServiceWorker'
 import 'normalize.css'
 
 import App from './App'
-import store from './store'
+import store from 'config/store'
 import './typography.scss'
 
 ReactDOM.render(

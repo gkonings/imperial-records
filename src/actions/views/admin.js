@@ -1,4 +1,4 @@
-import * as adminActions from '../../constants/adminActions'
+import * as adminActions from 'constants/adminActions'
 
 export const selectUnit = (unit) => {
   return {
