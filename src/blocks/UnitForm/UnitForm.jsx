@@ -2,10 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { reduxForm, Field, FieldArray } from 'redux-form'
 
-import { Button, ButtonGroup } from 'components/common'
-
-import {
-  Block } from '../../components'
+import { Button, ButtonGroup, Block } from 'components/common'
 
 import {
   Form,
