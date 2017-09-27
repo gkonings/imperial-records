@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Button, ButtonGroup } from 'components/common'
 
-import InputContainer from '../common/InputContainer'
+import InputContainer from 'components/common/form/input/Container'
 import Weapon from './Weapon'
 import styles from './Weapons.module.scss'
 

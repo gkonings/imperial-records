@@ -2,7 +2,7 @@ import React from 'react'
 
 import Label from './Label'
 import Error from './Error'
-import styles from './common.module.scss'
+import styles from './Container.module.scss'
 
 const InputContainer = ({children, meta, ...props}) => {
   const label = props.label || props.placeholder

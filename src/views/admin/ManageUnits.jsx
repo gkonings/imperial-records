@@ -1,8 +1,9 @@
 import React from 'react'
 
+import Header from 'components/page/header'
 import Form from 'components/units/form'
 
-import { Header, Unit, Units } from '../../blocks'
+import { Unit, Units } from '../../blocks'
 import { Grid, Content } from '../../components/grid'
 
 const ManageUnits = ({manageUnits, ...props}) => {

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './common.module.scss'
+import styles from './Error.module.scss'
 
 const Error = ({submitFailed, error}) => {
   return submitFailed && error

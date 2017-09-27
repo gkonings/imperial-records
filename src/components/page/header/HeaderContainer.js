@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import login from '../../actions/user/login'
-import logout from '../../actions/user/logout'
+import login from 'actions/user/login'
+import logout from 'actions/user/logout'
 import Header from './Header'
 
 const mapStateToProps = (state) => {

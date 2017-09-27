@@ -1,7 +1,8 @@
 import React from 'react'
 
-import * as symbols from '../../../constants/symbols'
-import InputContainer from '../common/InputContainer'
+import * as symbols from 'constants/symbols'
+import InputContainer from 'components/common/form/input/Container'
+
 import Dropdown from '../common/Dropdown'
 
 const Faction = ({input, meta, ...props}) => {

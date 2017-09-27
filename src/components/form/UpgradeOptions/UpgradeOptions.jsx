@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-import * as symbols from '../../../constants/symbols'
-import InputContainer from '../common/InputContainer'
+import * as symbols from 'constants/symbols'
+import InputContainer from 'components/common/form/input/Container'
 import MultiSelect from '../common/MultiSelect'
 
 class UpgradeOptions extends Component {

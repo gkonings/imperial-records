@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './common.module.scss'
+import styles from './Label.module.scss'
 
 const Label = ({value, small, required}) => {
   return (
