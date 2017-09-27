@@ -5,8 +5,7 @@ const Defense = () => {
     <svg width='612' height='612'
       x='0px' y='0px'
       viewBox='0 0 612 612'
-      xmlns='http://www.w3.org/2000/svg'
-      xmlnsSvg='http://www.w3.org/2000/svg'>
+      xmlns='http://www.w3.org/2000/svg'>
       <g id='svg_1'>
         <g transform='rotate(180 306,305.9994812011719) ' id='svg_1'>
           <path

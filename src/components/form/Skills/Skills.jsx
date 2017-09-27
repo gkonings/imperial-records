@@ -19,8 +19,7 @@ const Skills = ({fields, meta, ...props}) => {
         </ul>
         <ButtonGroup>
           <Button
-            value='Add Skill'
-            onClick={() => fields.push({})} />
+            onClick={() => fields.push({})}>Add Skill</Button>
         </ButtonGroup>
       </InputContainer>
     </div>

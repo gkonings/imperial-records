@@ -30,7 +30,6 @@ const Skill = ({skill, ...props}) => {
 
       <ButtonGroup>
         <Button
-          value='remove'
           link
           color='danger'
           onClick={props.remove}>

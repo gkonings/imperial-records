@@ -19,8 +19,6 @@ import {
 } from '../../components/form'
 
 const UnitForm = ({unit, ...props}) => {
-  // const handleSubmit =
-
   return (
     <Block>
       <Form
@@ -143,16 +141,17 @@ const UnitForm = ({unit, ...props}) => {
         <ButtonGroup>
           {unit &&
           <Button
-            value='Delete'
             link confirm
             confirmMessage={`Are you sure you want to delete ${unit.name}?`}
-            onClick={() => { props.deleteUnit(unit) }}>
-              Delete
-          </Button>}
+            onClick={() => { props.deleteUnit(unit) }}>Delete</Button>}
 
           {unit
-          ? <Button value='Update' type='submit' color='primary'>Update</Button>
-          : <Button value='Add' type='submit' color='primary'>Add</Button>}
+          ? <Button
+            type='submit'
+            color='primary'>Update</Button>
+          : <Button
+            type='submit'
+            color='primary'>Add</Button>}
         </ButtonGroup>
 
       </Form>

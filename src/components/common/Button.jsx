@@ -38,7 +38,7 @@ class Button extends Component {
   }
 
   render () {
-    const {value, type, link, confirm, confirmMessage, ...props} = this.props
+    const {children, color, type, link, confirm, confirmMessage, ...props} = this.props
     const {confirmOpen} = this.state
 
     return (
@@ -50,7 +50,7 @@ class Button extends Component {
           onClick={confirm
             ? this.confirmOpen
             : props.onClick}>
-          {value}
+          {children}
         </button>
         {confirm &&
         <Confirm

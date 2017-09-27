@@ -19,8 +19,7 @@ const Weapons = ({fields, meta, ...props}) => {
         </ul>
         <ButtonGroup>
           <Button
-            value='remove'
-            onClick={() => fields.push({})} />
+            onClick={() => fields.push({})} >remove</Button>
         </ButtonGroup>
       </InputContainer>
     </div>

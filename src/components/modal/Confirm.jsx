@@ -17,8 +17,8 @@ const Confirm = ({confirmMessage, ...props}) => {
       ? <h3>{confirmMessage}</h3>
       : <h3>Are you sure?</h3>}
       <ButtonGroup>
-        <Button value='Abort' onClick={props.onRequestClose} />
-        <Button value='Make it so!' onClick={props.onConfirm} color='danger'>Make it so!</Button>
+        <Button onClick={props.onRequestClose}>abort</Button>
+        <Button onClick={props.onConfirm} color='danger'>Make it so!</Button>
       </ButtonGroup>
     </Modal>
   )

@@ -40,10 +40,9 @@ const Weapon = ({weapon, ...props}) => {
 
       <ButtonGroup>
         <Button
-          value='remove'
           link
           color='danger'
-          onClick={props.remove} />
+          onClick={props.remove} >remove</Button>
       </ButtonGroup>
     </li>
   )
