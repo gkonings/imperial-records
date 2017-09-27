@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Block } from 'components/common'
+import Block from 'components/common/Block'
 import { UnitList } from '../../components/'
 
 const Units = ({units, addNew, ...props}) => {

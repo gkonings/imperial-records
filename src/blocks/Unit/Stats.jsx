@@ -1,7 +1,7 @@
 import React from 'react'
 
 import * as symbols from 'constants/symbols'
-import { Icon } from 'components/common'
+import Icon from 'components/common/Icon'
 import styles from './Stats.module.scss'
 
 const getTypeName = (type) => {

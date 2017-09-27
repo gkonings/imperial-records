@@ -1,7 +1,8 @@
 import React from 'react'
 import Modal from 'react-modal'
 
-import { Button, ButtonGroup } from 'components/common'
+import Button from 'components/common/Button'
+import ButtonGroup from 'components/common/ButtonGroup'
 
 import styles from './modal.module.scss'
 

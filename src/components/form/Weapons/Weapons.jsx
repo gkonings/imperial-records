@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { Button, ButtonGroup } from 'components/common'
+import Button from 'components/common/Button'
+import ButtonGroup from 'components/common/ButtonGroup'
 
 import InputContainer from 'components/common/form/input/Container'
 import Weapon from './Weapon'

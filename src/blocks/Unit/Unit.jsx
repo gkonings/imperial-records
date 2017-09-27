@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Block } from 'components/common'
+import Block from 'components/common/Block'
 import Header from './Header'
 import Stats from './Stats'
 import Skills from './Skills'

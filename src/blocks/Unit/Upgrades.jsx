@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Icon } from 'components/common'
+import Icon from 'components/common/Icon'
 import styles from './Upgrades.module.scss'
 
 const Upgrades = ({unit: {options}}) => {

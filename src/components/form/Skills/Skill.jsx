@@ -1,7 +1,8 @@
 import React from 'react'
 import { Field } from 'redux-form'
 
-import { Button, ButtonGroup } from 'components/common'
+import Button from 'components/common/Button'
+import ButtonGroup from 'components/common/ButtonGroup'
 
 import Input from '../Input'
 import Textarea from '../Textarea'
