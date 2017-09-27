@@ -1,7 +1,9 @@
 import React from 'react'
 
-import * as symbols from '../../constants/symbols'
-import { Icon, Unique } from '../../components'
+import * as symbols from 'constants/symbols'
+import { Unique } from 'components/common'
+
+import { Icon } from '../../components'
 import styles from './Header.module.scss'
 
 const Header = ({unit}) => {
