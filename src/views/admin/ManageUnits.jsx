@@ -4,7 +4,8 @@ import Header from 'components/page/header'
 import Form from 'components/units/form'
 
 import { Unit, Units } from '../../blocks'
-import { Grid, Content } from '../../components/grid'
+import Grid from '../../components/grid/Grid'
+import Content from '../../components/grid/Content'
 
 const ManageUnits = ({manageUnits, ...props}) => {
   return (
