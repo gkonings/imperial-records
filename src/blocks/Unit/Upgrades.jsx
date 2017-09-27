@@ -1,7 +1,7 @@
 import React from 'react'
 
+import { Icon } from 'components/common'
 import styles from './Upgrades.module.scss'
-import { Icon } from '../../components'
 
 const Upgrades = ({unit: {options}}) => {
   return (

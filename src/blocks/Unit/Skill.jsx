@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { Icon } from '../../components'
-import * as symbols from '../../constants/symbols'
+import { Icon } from 'components/common'
+import * as symbols from 'constants/symbols'
 import styles from './Skills.module.scss'
 
 const Skill = ({skill}) => {

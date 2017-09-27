@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Icon } from '../../components'
+import { Icon } from 'components/common'
 import styles from './Weapons.module.scss'
 
 const Weapon = ({weapon}) => {

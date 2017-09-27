@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { Unique } from 'components/common'
-import { Icon } from '../'
+import { Unique, Icon } from 'components/common'
 import styles from './UnitList.module.scss'
 
 const ListItem = ({unit, ...props}) => {
