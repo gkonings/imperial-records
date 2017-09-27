@@ -16,7 +16,7 @@ import {
   Skills,
   Weapons
 
-} from '../../components/form'
+} from 'components/form'
 
 const UnitForm = ({unit, ...props}) => {
   return (

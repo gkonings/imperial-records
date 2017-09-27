@@ -1,10 +1,10 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import addUnit from '../../actions/units/add'
-import updateUnit from '../../actions/units/update'
-import deleteUnit from '../../actions/units/delete'
-import UnitForm from './UnitForm'
+import addUnit from 'actions/units/add'
+import updateUnit from 'actions/units/update'
+import deleteUnit from 'actions/units/delete'
+import UnitForm from './Form'
 
 const mapStateToProps = (state) => {
   return {}

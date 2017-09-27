@@ -1,6 +1,8 @@
 import React from 'react'
 
-import { Header, UnitForm, Unit, Units } from '../../blocks'
+import Form from 'components/units/form'
+
+import { Header, Unit, Units } from '../../blocks'
 import { Grid, Content } from '../../components/grid'
 
 const ManageUnits = ({manageUnits, ...props}) => {
@@ -21,7 +23,7 @@ const ManageUnits = ({manageUnits, ...props}) => {
         {manageUnits.selected && <Unit unit={manageUnits.selected} />}
       </Content>
       <Content area='form'>
-        <UnitForm unit={manageUnits.selected} />
+        <Form unit={manageUnits.selected} />
       </Content>
     </Grid>
   )
