@@ -7,11 +7,17 @@ const Header = ({user, admin, ...props}) => {
   return (
     <div className={styles.header}>
       <h1 className={styles.h1}>Imperial Records</h1>
-      {admin &&
-      <Login
-        loggedIn={user.loggedInUser}
-        login={props.login}
-        logout={props.logout} />}
+      <div className={styles.usermenu}>
+        {admin &&
+        <Login
+          loggedIn={user.loggedInUser}
+          login={props.login}
+          logout={props.logout} />}
+      </div>
+      <div className={styles.menu}>
+  lalala
+</div>
+
     </div>
   )
 }
