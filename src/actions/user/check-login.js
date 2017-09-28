@@ -5,7 +5,6 @@ const checkLogin = () => {
   return dispatch => {
     dispatch(requestedAction())
     auth.onAuthStateChanged((user) => {
-      console.log(user)
       if (user) {
         dispatch(succesAction(user))
       }

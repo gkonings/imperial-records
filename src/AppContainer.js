@@ -3,17 +3,15 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import checkLogin from 'actions/user/check-login'
-import {
-  ManageUnits
-} from './views/admin'
+import App from './App'
 
-class App extends Component {
+class AppContainer extends Component {
   componentDidMount () {
     this.props.checkLogin()
   }
 
   render () {
-    return <ManageUnits />
+    return <App />
   }
 }
 
@@ -30,4 +28,4 @@ const mapDispatchToProps = (dispatch) => ({
   dispatch)
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(AppContainer)

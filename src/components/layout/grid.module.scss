@@ -2,28 +2,19 @@
   display: grid;
 }
 
-.gridAdmin{
+.admin{
   composes: grid;
-  grid-template-columns: 275px 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-template-areas: 
-    "header header header"
-    "list preview preview"
-    "list form form"
+    "header"
+    "main"
 }
 
-.header{
-  grid-area: header;
-}
-
-.list{
-  grid-area: list;
-}
-
-.form{
-  grid-area: form;
-}
-
-.preview{
-  grid-area: preview;
+.editor{
+  composes: grid;
+  grid-template-columns: 275px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "list content"
 }

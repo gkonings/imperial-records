@@ -1,11 +1,11 @@
 import React from 'react'
 
-import styles from './grid.module.scss'
+import styles from './Grid.module.scss'
 
-const Grid = ({children, admin, ...props}) => {
+const Grid = ({children, type, ...props}) => {
   return (
     <div
-      className={admin ? styles.gridAdmin : styles.grid}
+      className={styles[type]}
       {...props}>
       {children}
     </div>

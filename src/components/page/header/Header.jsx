@@ -1,15 +1,17 @@
 import React from 'react'
 
-import Button from 'components/common/Button'
+import Login from './Login'
 import styles from './Header.module.scss'
 
-const Header = ({user, ...props}) => {
+const Header = ({user, admin, ...props}) => {
   return (
     <div className={styles.header}>
       <h1 className={styles.h1}>Imperial Records</h1>
-      {user.loggedInUser
-      ? <Button onClick={props.logout}>Logout</Button>
-      : <Button onClick={props.login}>Login</Button>}
+      {admin &&
+      <Login
+        loggedIn={user.loggedInUser}
+        login={props.login}
+        logout={props.logout} />}
     </div>
   )
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Header from 'components/page/header'
 import Form from 'components/units/form'
 
 import { Unit, Units } from '../../blocks'
@@ -9,10 +8,8 @@ import Content from '../../components/layout/Content'
 
 const ManageUnits = ({manageUnits, ...props}) => {
   return (
-    <Grid admin>
-      <Content area='header'>
-        <Header />
-      </Content>
+    <Grid type='editor'>
+
       <Content area='list'>
         <Units
           livereload
@@ -20,10 +17,8 @@ const ManageUnits = ({manageUnits, ...props}) => {
           selectUnit={props.selectUnit}
         />
       </Content>
-      <Content area='preview'>
+      <Content area='content'>
         {manageUnits.selected && <Unit unit={manageUnits.selected} />}
-      </Content>
-      <Content area='form'>
         <Form unit={manageUnits.selected} />
       </Content>
     </Grid>

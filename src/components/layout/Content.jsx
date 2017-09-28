@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './grid.module.scss'
+import styles from './Content.module.scss'
 
 const Content = ({children, area, ...props}) => {
   return (

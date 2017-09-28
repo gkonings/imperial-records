@@ -4,12 +4,12 @@ import { Provider } from 'react-redux'
 // import registerServiceWorker from './registerServiceWorker'
 import 'normalize.css'
 
-import App from 'App'
+import AppContainer from './AppContainer'
 import store from 'config/store'
 import 'scss/typography.scss'
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <AppContainer />
   </Provider>, document.getElementById('root'))
 // registerServiceWorker()
