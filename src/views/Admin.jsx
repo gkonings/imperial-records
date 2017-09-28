@@ -8,7 +8,10 @@ import {
 import Header from 'components/page/header/Container'
 import Grid from 'components/layout/Grid'
 import Content from 'components/layout/Content'
-import ManageUnits from 'views/admin/ManageUnitsContainer'
+
+import Dashboard from './admin/Dashboard'
+import Units from './admin/manage/UnitsContainer'
+import Upgrades from './admin/manage/UpgradesContainer'
 
 const Admin = ({user}) => {
   return (
@@ -20,7 +23,9 @@ const Admin = ({user}) => {
         {user.loggedInUser
         ? <Router >
           <Switch>
-            <Route exact path='/admin/' component={ManageUnits} />
+            <Route exact path='/admin/' component={Dashboard} />
+            <Route exact path='/admin/units/' component={Units} />
+            <Route exact path='/admin/upgrades/' component={Upgrades} />
           </Switch>
         </Router>
         : null}

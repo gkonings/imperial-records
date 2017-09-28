@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import ManageUnits from './ManageUnits'
+import Upgrades from './Upgrades'
 import * as adminActions from 'actions/views/admin'
 
 const mapStateToProps = (state, ownProps) => {
@@ -17,4 +17,4 @@ const mapDispatchToProps = (dispatch) => ({
   dispatch)
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(ManageUnits)
+export default connect(mapStateToProps, mapDispatchToProps)(Upgrades)

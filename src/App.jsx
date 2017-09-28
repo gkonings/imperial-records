@@ -14,7 +14,7 @@ class App extends Component {
       <Router >
         <Switch>
           <Route exact path='/' component={ArmyBuilder} />
-          <Route exact path='/admin' component={Admin} />
+          <Route path='/admin' component={Admin} />
         </Switch>
       </Router>
 
