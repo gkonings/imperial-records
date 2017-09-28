@@ -6,7 +6,7 @@ import Units from './Units'
 import getUnits from '../../actions/units/get'
 
 class UnitsContainer extends Component {
-  componentWillMount () {
+  componentDidMount () {
     const { units, livereload } = this.props
     if (!units.loading && !units.list) {
       this.props.getUnits(livereload)

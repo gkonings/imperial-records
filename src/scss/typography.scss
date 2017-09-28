@@ -1,5 +1,5 @@
 @import 'colors';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:700');
+@import url('https://fonts.googleapis.com/css?family=Kanit:700|Open+Sans');
 
 body {
   color: $black; 
@@ -15,7 +15,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: $black; 
-  font-family: 'Open Sans Condensed', sans-serif; 
+  font-family: 'Kanit', sans-serif;
   font-weight: 700; 
   text-transform: uppercase; 
 }

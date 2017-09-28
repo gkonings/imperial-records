@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import ManageUnits from './ManageUnits'
-import * as adminActions from '../../actions/views/admin'
+import * as adminActions from 'actions/views/admin'
 
 const mapStateToProps = (state, ownProps) => {
   return {

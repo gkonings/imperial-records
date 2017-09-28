@@ -4,11 +4,8 @@ import Confirm from 'components/modal/Confirm'
 import styles from './Button.module.scss'
 
 class Button extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      confirmOpen: false
-    }
+  state = {
+    confirmOpen: false
   }
 
   onConfirm = (...props) => {

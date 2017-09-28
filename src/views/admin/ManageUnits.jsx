@@ -10,7 +10,6 @@ import Content from '../../components/layout/Content'
 const ManageUnits = ({manageUnits, ...props}) => {
   return (
     <Grid admin>
-
       <Content area='header'>
         <Header />
       </Content>
