@@ -10,6 +10,10 @@ export const admin = [
   {
     name: 'Upgrades',
     path: '/admin/upgrades'
+  },
+  {
+    name: 'Army Builder',
+    path: '/'
   }
 ]
 

@@ -2,7 +2,9 @@ import React from 'react'
 
 const ArmyBuilder = () => {
   return (
-    <div />
+    <div>
+      Armybuilder
+    </div>
   )
 }
 
