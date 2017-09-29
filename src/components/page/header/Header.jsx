@@ -1,6 +1,8 @@
 import React from 'react'
 
+import * as menu from './menuitems'
 import Login from './Login'
+import Menu from './Menu'
 import styles from './Header.module.scss'
 
 const Header = ({user, admin, ...props}) => {
@@ -15,8 +17,8 @@ const Header = ({user, admin, ...props}) => {
           logout={props.logout} />}
       </div>
       <div className={styles.menu}>
-  lalala
-</div>
+        <Menu items={admin ? menu.admin : menu.armybuilder} />
+      </div>
 
     </div>
   )

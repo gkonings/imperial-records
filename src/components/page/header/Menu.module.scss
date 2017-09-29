@@ -1,0 +1,15 @@
+@import '../../../scss/colors';
+
+.menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.menuItem {
+  flex: 1;
+
+}
+
+.link {
+  color: $white;
+}

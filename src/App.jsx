@@ -11,7 +11,7 @@ import Admin from 'views/AdminContainer'
 class App extends Component {
   render () {
     return (
-      <Router >
+      <Router path='/'>
         <Switch>
           <Route exact path='/' component={ArmyBuilder} />
           <Route path='/admin' component={Admin} />
