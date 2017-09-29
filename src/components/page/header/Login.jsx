@@ -6,8 +6,8 @@ import styles from './Login.module.scss'
 const Login = ({loggedIn, ...props}) => {
   return (<div className={styles.login}>
     {loggedIn
-    ? <Button onClick={props.logout}>Logout</Button>
-    : <Button onClick={props.login}>Login</Button>}
+    ? <Button link onClick={props.logout}>Logout</Button>
+    : <Button link onClick={props.login}>Login</Button>}
   </div>)
 }
 
