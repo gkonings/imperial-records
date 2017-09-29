@@ -5,7 +5,7 @@ import Login from './Login'
 import Menu from './Menu'
 import styles from './Header.module.scss'
 
-const Header = ({user, admin, ...props}) => {
+const Header = ({user, admin, location, ...props}) => {
   return (
     <div className={styles.header}>
       <h1 className={styles.h1}>Imperial Records</h1>
@@ -17,7 +17,9 @@ const Header = ({user, admin, ...props}) => {
           logout={props.logout} />}
       </div>
       <div className={styles.menu}>
-        <Menu items={admin ? menu.admin : menu.armybuilder} />
+        <Menu
+          location={location}
+          items={admin ? menu.admin : menu.armybuilder} />
       </div>
 
     </div>
