@@ -1,6 +1,6 @@
 import { auth } from 'config/database'
 import * as userActions from 'constants/userActions'
-import { toUser } from 'services/firebase/toUser'
+import toUser from 'services/firebase/toUser'
 
 const checkLogin = () => {
   return dispatch => {

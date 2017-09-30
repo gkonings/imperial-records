@@ -1,4 +1,4 @@
-export const toUser = (firebaseUser) => {
+const toUser = (firebaseUser) => {
   const storeUser = {}
   const userProperties = [
     'displayName',
@@ -21,3 +21,5 @@ export const toUser = (firebaseUser) => {
 
   return storeUser
 }
+
+export default toUser

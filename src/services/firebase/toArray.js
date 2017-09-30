@@ -1,4 +1,4 @@
-export const toArray = (firebaseData) => {
+const toArray = (firebaseData) => {
   let arr = []
   Object.keys(firebaseData).forEach((key, index) => {
     arr.push({
@@ -7,3 +7,5 @@ export const toArray = (firebaseData) => {
   })
   return arr
 }
+
+export default toArray
