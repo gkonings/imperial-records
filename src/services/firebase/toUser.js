@@ -1,25 +1,26 @@
-const toUser = (firebaseUser) => {
-  const storeUser = {}
-  const userProperties = [
-    'displayName',
-    'email',
-    'emailVerified',
-    'isAnonymous',
-    'photoURL',
-    'providerData',
-    'providerId',
-    'refreshToken',
-    'uid',
-    'isAdmin'
-  ]
+ const toUser = (firebaseUser) => {
+   const storeUser = {}
 
-  userProperties.forEach((prop) => {
-    if (prop in firebaseUser) {
-      storeUser[prop] = firebaseUser[prop]
-    }
-  })
+   const userProperties = [
+     'displayName',
+     'email',
+     'emailVerified',
+     'isAnonymous',
+     'photoURL',
+     'providerData',
+     'providerId',
+     'refreshToken',
+     'uid',
+     'isAdmin'
+   ]
 
-  return storeUser
-}
+   userProperties.forEach((prop) => {
+     if (prop in firebaseUser) {
+       storeUser[prop] = firebaseUser[prop]
+     }
+   })
 
-export default toUser
+   return storeUser
+ }
+
+ export default toUser
