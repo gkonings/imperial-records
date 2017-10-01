@@ -4,7 +4,7 @@
 
 .admin{
   composes: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto;
   grid-template-rows: auto;
   grid-template-areas: 
     "header"

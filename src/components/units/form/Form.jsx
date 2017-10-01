@@ -7,7 +7,6 @@ import ButtonGroup from 'components/common/ButtonGroup'
 import Block from 'components/common/Block'
 
 import {
-  Form,
   Input,
   Faction,
   Type,
@@ -23,7 +22,7 @@ import {
 const UnitForm = ({unit, ...props}) => {
   return (
     <Block>
-      <Form
+      <form
         onSubmit={props.handleSubmit(unit ? props.updateUnit : props.addUnit)}>
 
         {unit
@@ -156,7 +155,7 @@ const UnitForm = ({unit, ...props}) => {
             color='primary'>Add</Button>}
         </ButtonGroup>
 
-      </Form>
+      </form>
     </Block>
   )
 }

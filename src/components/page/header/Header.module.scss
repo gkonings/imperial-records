@@ -20,12 +20,12 @@
 
 .usermenu{
   grid-area: usermenu;
-  width: 100%;
+  display: inline-block;
   text-align: right;
 }
 
 .menu{
   grid-area: menu;
-  width: 100%;
+  display: inline-block;
   text-align: right;
 }
