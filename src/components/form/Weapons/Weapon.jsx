@@ -1,10 +1,13 @@
 import React from 'react'
 import { Field } from 'redux-form'
 
+import * as options from 'services/form/options'
 import Button from 'components/common/Button'
 import ButtonGroup from 'components/common/ButtonGroup'
-
-import { Input, Dice, Range, Textarea } from '../'
+import Input from 'components/common/form/Input'
+import Textarea from 'components/common/form/Textarea'
+import Dropdown from 'components/common/form/Dropdown'
+import MultiSelect from 'components/common/form/MultiSelect'
 
 import styles from './Weapons.module.scss'
 
@@ -22,17 +25,20 @@ const Weapon = ({weapon, ...props}) => {
         required
         label='Range from'
         small
-        component={Range} />
+        options={options.range}
+        component={Dropdown} />
       <Field
         name={`${weapon}.rangeTo`}
         label='Range to'
         small
-        component={Range} />
+        options={options.range}
+        component={Dropdown} />
       <Field
         name={`${weapon}.dice`}
         label='Dice'
         small
-        component={Dice} />
+        options={options.dice}
+        component={MultiSelect} />
       <Field
         name={`${weapon}.abilities`}
         label='Abilities'

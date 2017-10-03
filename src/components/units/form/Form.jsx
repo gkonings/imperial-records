@@ -2,21 +2,17 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { reduxForm, Field, FieldArray } from 'redux-form'
 
+import * as options from 'services/form/options'
 import Button from 'components/common/Button'
 import ButtonGroup from 'components/common/ButtonGroup'
 import Block from 'components/common/Block'
+import Input from 'components/common/form/Input'
+import Dropdown from 'components/common/form/Dropdown'
+import MultiSelect from 'components/common/form/MultiSelect'
 
 import {
-  Input,
-  Faction,
-  Type,
-  Defense,
-  Result,
-  Rank,
-  UpgradeOptions,
   Skills,
   Weapons
-
 } from 'components/form'
 
 const UnitForm = ({unit, ...props}) => {
@@ -32,8 +28,9 @@ const UnitForm = ({unit, ...props}) => {
         <Field
           name='faction'
           label='Faction'
+          options={options.factions}
           required
-          component={Faction} />
+          component={Dropdown} />
 
         <Field
           name='name'
@@ -62,8 +59,9 @@ const UnitForm = ({unit, ...props}) => {
         <Field
           name='rank'
           label='Rank'
+          options={options.rank}
           required
-          component={Rank} />
+          component={Dropdown} />
 
         <Field
           name='size'
@@ -75,14 +73,16 @@ const UnitForm = ({unit, ...props}) => {
         <Field
           name='type'
           label='Type'
+          options={options.types}
           required
-          component={Type} />
+          component={Dropdown} />
 
         <Field
           name='defense'
           label='Defense die'
+          options={options.defense}
           required
-          component={Defense} />
+          component={Dropdown} />
 
         <Field
           name='hasArmor'
@@ -111,12 +111,14 @@ const UnitForm = ({unit, ...props}) => {
         <Field
           name='offensiveSurge'
           label='Offensive Surge'
-          component={Result} />
+          options={options.result}
+          component={Dropdown} />
 
         <Field
           name='defensiveSurge'
           label='Defensive Surge'
-          component={Result} />
+          options={options.result}
+          component={Dropdown} />
 
         <Field
           name='speed'
@@ -137,7 +139,8 @@ const UnitForm = ({unit, ...props}) => {
         <Field
           name='options'
           label='Options'
-          component={UpgradeOptions} />
+          options={options.upgrades}
+          component={MultiSelect} />
 
         <ButtonGroup>
           {unit &&

@@ -4,8 +4,8 @@ import { Field } from 'redux-form'
 import Button from 'components/common/Button'
 import ButtonGroup from 'components/common/ButtonGroup'
 
-import Input from '../Input'
-import Textarea from '../Textarea'
+import Input from 'components/common/form/Input'
+import Textarea from 'components/common/form/Textarea'
 import styles from './Skills.module.scss'
 
 const Skill = ({skill, ...props}) => {
