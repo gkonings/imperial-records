@@ -18,8 +18,6 @@ class Multiselect extends Component {
   }
 
   render () {
-    console.log(this.props)
-
     const {input, meta, options, ...props} = this.props
 
     return (
@@ -29,7 +27,7 @@ class Multiselect extends Component {
           removeFromList={this.removeFromList} />
         <Dropdown hideContainer
           name={input.name}
-          value={input.value}
+          value=''
           label={input.label}
           options={options}
           onChange={this.addToList} />
