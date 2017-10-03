@@ -5,11 +5,7 @@ import Confirm from 'components/modal/Confirm'
 import styles from './Button.module.scss'
 
 class Button extends Component {
-  state = {
-    confirmOpen: false
-  }
-
-  static PropTypes = {
+  PropTypes = {
     onClick: PropTypes.func.isRequired,
 
     color: PropTypes.oneOf(['primary', 'danger']),
@@ -19,8 +15,12 @@ class Button extends Component {
     confirmMessage: PropTypes.string
   }
 
-  static defaultProps = {
+  defaultProps = {
     type: 'button'
+  }
+
+  state = {
+    confirmOpen: false
   }
 
   onConfirm = (...props) => {
