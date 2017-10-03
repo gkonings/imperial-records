@@ -8,13 +8,8 @@ import AppContainer from './AppContainer'
 import store from 'config/store'
 import 'scss/typography.scss'
 
-import App from './testing/app.jsx'
-
 ReactDOM.render(
-  <App />, document.getElementById('root'))
-
-// ReactDOM.render(
-//   <Provider store={store}>
-//     <AppContainer />
-//   </Provider>, document.getElementById('root'))
+  <Provider store={store}>
+    <AppContainer />
+  </Provider>, document.getElementById('root'))
 // registerServiceWorker()

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import Confirm from 'components/modal/Confirm'
 import styles from './Button.module.scss'
@@ -6,6 +7,20 @@ import styles from './Button.module.scss'
 class Button extends Component {
   state = {
     confirmOpen: false
+  }
+
+  static PropTypes = {
+    onClick: PropTypes.func.isRequired,
+
+    color: PropTypes.oneOf(['primary', 'danger']),
+    type: PropTypes.oneOf(['submit', 'button']),
+    link: PropTypes.bool,
+    confirm: PropTypes.bool,
+    confirmMessage: PropTypes.string
+  }
+
+  static defaultProps = {
+    type: 'button'
   }
 
   onConfirm = (...props) => {
@@ -43,7 +58,7 @@ class Button extends Component {
         <button
           className={this.getClassName()}
           {...props}
-          type={type || 'button'}
+          type={type}
           onClick={confirm
             ? this.confirmOpen
             : props.onClick}>
