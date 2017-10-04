@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './UnitList.module.scss'
+import styles from './ListItem.module.scss'
 
 const NewUnit = ({addNEw, ...props}) => {
   return (

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import Units from './Units'
+import List from './List'
 import getUnits from '../../actions/units/get'
 
 class UnitsContainer extends Component {
@@ -14,7 +14,7 @@ class UnitsContainer extends Component {
   }
 
   render () {
-    return <Units {...this.props} />
+    return <List {...this.props} />
   }
 }
 

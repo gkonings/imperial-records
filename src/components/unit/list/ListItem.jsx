@@ -2,7 +2,7 @@ import React from 'react'
 
 import Unique from 'components/common/Unique'
 import Icon from 'components/common/Icon'
-import styles from './UnitList.module.scss'
+import styles from './ListItem.module.scss'
 
 const ListItem = ({unit, ...props}) => {
   return (

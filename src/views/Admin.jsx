@@ -7,11 +7,11 @@ import {
 import Header from 'components/page/header/Container'
 import Grid from 'components/layout/Grid'
 import Content from 'components/layout/Content'
-import NotLoggedIn from './admin/NotLoggedIn'
 
-import Dashboard from './admin/Dashboard'
-import Units from './admin/manage/UnitsContainer'
-import Upgrades from './admin/manage/UpgradesContainer'
+import NotLoggedIn from 'views/admin/NotLoggedIn'
+import Dashboard from 'views/admin/Dashboard'
+import Units from 'views/admin/manage/UnitsContainer'
+import Upgrades from 'views/admin/manage/UpgradesContainer'
 
 class Admin extends Component {
   render () {
