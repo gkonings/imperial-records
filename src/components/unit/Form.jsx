@@ -11,8 +11,8 @@ import Dropdown from 'components/common/form/Dropdown'
 import MultiSelect from 'components/common/form/MultiSelect'
 import Array from 'components/common/form/FieldArray'
 
-import Skill from './fieldArray/Skill'
-import Weapon from './fieldArray/Weapon'
+import Skill from './form/Skill'
+import Weapon from './form/Weapon'
 
 const UnitForm = ({unit, ...props}) => {
   return (

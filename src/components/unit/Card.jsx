@@ -1,12 +1,12 @@
 import React from 'react'
 
 import Block from 'components/common/Block'
-import Header from './Header'
-import Stats from './Stats'
-import Skills from './Skills'
-import Weapons from './Weapons'
-import Upgrades from './Upgrades'
-import styles from './Unit.module.scss'
+import Header from './card/Header'
+import Stats from './card/Stats'
+import Skills from './card/Skills'
+import Weapons from './card/Weapons'
+import Upgrades from './card/Upgrades'
+import styles from './Card.module.scss'
 
 const Unit = ({unit}) => {
   return (
