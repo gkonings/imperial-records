@@ -1,9 +1,9 @@
 import React from 'react'
 
 import styles from './Block.module.scss'
-const Block = ({noPadding, ...props}) => {
+const Block = ({padding, ...props}) => {
   return (
-    <div className={noPadding ? styles.blockNoPadding : styles.block}>
+    <div className={padding ? styles.padding : styles.noPadding}>
       {props.children}
     </div>
   )

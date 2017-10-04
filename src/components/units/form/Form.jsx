@@ -16,7 +16,7 @@ import Weapon from './fieldArray/Weapon'
 
 const UnitForm = ({unit, ...props}) => {
   return (
-    <Block>
+    <Block padding>
       <form
         onSubmit={props.handleSubmit(unit ? props.updateUnit : props.addUnit)}>
 

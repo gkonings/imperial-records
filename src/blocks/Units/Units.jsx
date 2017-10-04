@@ -5,7 +5,7 @@ import { UnitList } from '../../components/'
 
 const Units = ({units, addNew, ...props}) => {
   return (
-    <Block noPadding>
+    <Block>
       <UnitList
         {...props}
         units={units}

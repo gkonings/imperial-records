@@ -10,7 +10,7 @@ import styles from './Unit.module.scss'
 
 const Unit = ({unit}) => {
   return (
-    <Block noPadding>
+    <Block>
       <div className={styles.grid}>
         <div className={styles.header}>
           <Header unit={unit} />
