@@ -1,12 +1,12 @@
 @import '../../../scss/colors';
 
-.weapons ul{
+.list{
   list-style-type: none;
   margin: 0 0 1em;
   padding: 0;
 }
 
-.weapon{
+.listItem{
   margin: 0.2em 0;
   padding: 1em 0.5em 0.5em;
   background: $off-white;

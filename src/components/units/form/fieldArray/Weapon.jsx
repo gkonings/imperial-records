@@ -9,38 +9,36 @@ import Textarea from 'components/common/form/Textarea'
 import Dropdown from 'components/common/form/Dropdown'
 import MultiSelect from 'components/common/form/MultiSelect'
 
-import styles from './Weapons.module.scss'
-
-const Weapon = ({weapon, ...props}) => {
+const Weapon = ({item, ...props}) => {
   return (
-    <li className={styles.weapon}>
+    <div>
       <Field
-        name={`${weapon}.name`}
+        name={`${item}.name`}
         label='Weapon name'
         required
         small
         component={Input} />
       <Field
-        name={`${weapon}.rangeFrom`}
+        name={`${item}.rangeFrom`}
         required
         label='Range from'
         small
         options={options.range}
         component={Dropdown} />
       <Field
-        name={`${weapon}.rangeTo`}
+        name={`${item}.rangeTo`}
         label='Range to'
         small
         options={options.range}
         component={Dropdown} />
       <Field
-        name={`${weapon}.dice`}
+        name={`${item}.dice`}
         label='Dice'
         small
         options={options.dice}
         component={MultiSelect} />
       <Field
-        name={`${weapon}.abilities`}
+        name={`${item}.abilities`}
         label='Abilities'
         small
         component={Textarea} />
@@ -51,7 +49,7 @@ const Weapon = ({weapon, ...props}) => {
           color='danger'
           onClick={props.remove} >remove</Button>
       </ButtonGroup>
-    </li>
+    </div>
   )
 }
 

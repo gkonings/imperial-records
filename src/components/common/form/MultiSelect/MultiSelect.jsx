@@ -27,8 +27,8 @@ class Multiselect extends Component {
           removeFromList={this.removeFromList} />
         <Dropdown hideContainer
           name={input.name}
-          value=''
           label={input.label}
+          value=''
           options={options}
           onChange={this.addToList} />
       </InputContainer>

@@ -9,11 +9,10 @@ import Block from 'components/common/Block'
 import Input from 'components/common/form/Input'
 import Dropdown from 'components/common/form/Dropdown'
 import MultiSelect from 'components/common/form/MultiSelect'
+import Array from 'components/common/form/FieldArray'
 
-import {
-  Skills,
-  Weapons
-} from 'components/form'
+import Skill from './fieldArray/Skill'
+import Weapon from './fieldArray/Weapon'
 
 const UnitForm = ({unit, ...props}) => {
   return (
@@ -129,12 +128,14 @@ const UnitForm = ({unit, ...props}) => {
         <FieldArray
           name='skills'
           label='Skills'
-          component={Skills} />
+          itemComponent={Skill}
+          component={Array} />
 
         <FieldArray
           name='weapons'
           label='Weapons'
-          component={Weapons} />
+          itemComponent={Weapon}
+          component={Array} />
 
         <Field
           name='options'

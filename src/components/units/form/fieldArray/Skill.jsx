@@ -6,24 +6,23 @@ import ButtonGroup from 'components/common/ButtonGroup'
 
 import Input from 'components/common/form/Input'
 import Textarea from 'components/common/form/Textarea'
-import styles from './Skills.module.scss'
 
-const Skill = ({skill, ...props}) => {
+const Skill = ({item, ...props}) => {
   return (
-    <li className={styles.skill}>
+    <div>
       <Field
-        name={`${skill}.name`}
+        name={`${item}.name`}
         label='Skill name'
         required
         small
         component={Input} />
       <Field
-        name={`${skill}.text`}
+        name={`${item}.text`}
         label='Skill text'
         small
         component={Textarea} />
       <Field
-        name={`${skill}.action`}
+        name={`${item}.action`}
         label='is action'
         type='checkbox'
         small
@@ -37,7 +36,7 @@ const Skill = ({skill, ...props}) => {
            remove
         </Button>
       </ButtonGroup>
-    </li>
+    </div>
   )
 }
 
