@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Weapon from './Weapon'
+import Weapon from './weapons/Weapon'
 import styles from './Weapons.module.scss'
 
-const Skills = ({unit: {weapons}}) => {
+const Weapons = ({unit: {weapons}}) => {
   return (
     <div className={styles.weapons}>
       {weapons && weapons.map((weapon, index) =>
@@ -12,4 +12,4 @@ const Skills = ({unit: {weapons}}) => {
   )
 }
 
-export default Skills
+export default Weapons

@@ -1,8 +1,8 @@
 import React from 'react'
 
 import * as symbols from 'constants/symbols'
-import Unique from 'components/common/Unique'
 import Icon from 'components/common/Icon'
+import Name from './header/Name'
 
 import styles from './Header.module.scss'
 
@@ -13,15 +13,7 @@ const Header = ({unit}) => {
         <Icon type={unit.faction} />
       </div>
       <div className={styles.name}>
-        <header>
-          <h4>
-            {unit.unique && <Unique />}
-            {unit.name}
-          </h4>
-          <h6>
-            {unit.subtitle}
-          </h6>
-        </header>
+        <Name unit={unit} />
       </div>
       <div className={unit.faction === symbols.FACTION.EMPIRE ? styles.rankSizeEmpire : styles.rankSizeRebel}>
         <div className={styles.rank}>

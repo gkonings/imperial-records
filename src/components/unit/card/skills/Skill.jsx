@@ -2,7 +2,7 @@ import React from 'react'
 
 import Icon from 'components/common/Icon'
 import * as symbols from 'constants/symbols'
-import styles from './Skills.module.scss'
+import styles from './Skill.module.scss'
 
 const Skill = ({skill}) => {
   return (

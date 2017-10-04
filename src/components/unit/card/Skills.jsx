@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Skill from './Skill'
+import Skill from './skills/Skill'
 import styles from './Skills.module.scss'
 
 const Skills = ({unit: {skills}}) => {
