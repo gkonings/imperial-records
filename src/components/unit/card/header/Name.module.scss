@@ -1,8 +1,11 @@
+@import '../../../../scss/colors';
+
 .name{
   margin-top: 0.3em;
 }
 
 .title{
+  color: $white;
   font-family: 'Kanit', sans-serif;
   text-transform: uppercase; 
   font-weight: 700;
@@ -10,8 +13,9 @@
 }
 
 .subtitle{
+  color: $white;
   font-family: 'Kanit', sans-serif;
   text-transform: uppercase; 
   font-weight: 700;
-  line-height: 1em;
+  line-height: 0.6em;
 }

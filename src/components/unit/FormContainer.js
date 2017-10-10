@@ -6,8 +6,12 @@ import updateUnit from 'actions/units/update'
 import deleteUnit from 'actions/units/delete'
 import UnitForm from './Form'
 
-const mapStateToProps = (state) => {
-  return {}
+const mapStateToProps = (state, ownProps) => {
+  return {
+    // propNamespace: ownProps.unit ? ownProps.unit.key : '-new',
+    form: ownProps.unit ? `unitForm-${ownProps.unit.key}` : 'unitForm-new',
+    initialValues: ownProps.unit
+  }
 }
 
 const mapDispatchToProps = (dispatch) => ({

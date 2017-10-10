@@ -10,8 +10,7 @@ const TextArea = ({input, small, meta, ...props}) => {
       <textarea
         className={styles.textarea}
         {...input}
-        {...props}
-      >
+        {...props}>
         {input.value}
       </textarea>
     </InputContainer>

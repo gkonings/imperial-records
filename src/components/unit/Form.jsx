@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import { reduxForm, Field, FieldArray } from 'redux-form'
 
 import * as options from 'services/form/options'
@@ -9,10 +8,12 @@ import Block from 'components/common/Block'
 import Input from 'components/common/form/Input'
 import Dropdown from 'components/common/form/Dropdown'
 import MultiSelect from 'components/common/form/MultiSelect'
-import Array from 'components/common/form/FieldArray'
 
+import Array from 'components/common/form/FieldArray'
 import Skill from './form/Skill'
 import Weapon from './form/Weapon'
+
+import RichText from 'components/common/form/RichText'
 
 const UnitForm = ({unit, ...props}) => {
   return (
@@ -23,6 +24,11 @@ const UnitForm = ({unit, ...props}) => {
         {unit
         ? <h2>Edit {unit.name}</h2>
         : <h2>Add new unit</h2>}
+
+        <Field withRef
+          name='rte'
+          label='RTE'
+          component={RichText} />
 
         <Field
           name='faction'
@@ -183,15 +189,10 @@ const validate = (values) => {
 }
 
 const form = reduxForm({
-  form: 'unitForm',
+  // form: 'unitForm',
   validate,
-  enableReinitialize: true
+  enableReinitialize: true,
+  forceUnregisterOnUnmount: true
 })(UnitForm)
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    initialValues: ownProps.unit
-  }
-}
-
-export default connect(mapStateToProps)(form)
+export default form

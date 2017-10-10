@@ -5,7 +5,7 @@ import ListItem from './list/ListItem'
 import NewUnit from './list/NewUnit'
 import styles from './List.module.scss'
 
-const Units = ({units, addNew, ...props}) => {
+const Units = ({units, addNew, location, ...props}) => {
   return (
     <Block>
       <ul className={styles.list}>
@@ -14,6 +14,7 @@ const Units = ({units, addNew, ...props}) => {
         {units.list && units.list
         .map(unit =>
           <ListItem
+            location={location}
             key={unit.key}
             unit={unit}
             select={() => props.selectUnit(unit)} />

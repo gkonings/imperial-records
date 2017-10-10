@@ -1,25 +1,32 @@
 import React from 'react'
-
-import Form from 'components/unit/FormContainer'
+import {
+  Route,
+  Switch
+} from 'react-router-dom'
 
 import List from 'components/unit/ListContainer'
-import Unit from 'components/unit/Card'
+import Edit from './units/EditContainer'
+import New from './units/New'
 import Grid from 'components/layout/Grid'
 import Content from 'components/layout/Content'
 
-const ManageUnits = ({manageUnits, ...props}) => {
+const ManageUnits = ({manageUnits, match, location, ...props}) => {
   return (
     <Grid type='editor'>
       <Content area='list'>
         <List
           livereload
+          location={location}
           addNew={props.deselectUnit}
           selectUnit={props.selectUnit}
         />
       </Content>
       <Content area='content'>
-        {manageUnits.selected && <Unit unit={manageUnits.selected} />}
-        <Form unit={manageUnits.selected} />
+        <Switch>
+          <Route exact path={match.path} component={New} />
+          <Route path={`${match.path}:id`} component={Edit} />
+        </Switch>
+
       </Content>
     </Grid>
   )
