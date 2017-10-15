@@ -26,8 +26,9 @@ const Skill = ({item, ...props}) => {
         component={Textarea} />
 
       <Field withRef
-        name={`${item}.rte`}
-        label='RTE'
+        name={`${item}.textRte`}
+        label='Skill text'
+        small
         component={RichText} />
       <Field
         name={`${item}.action`}

@@ -13,8 +13,6 @@ import Array from 'components/common/form/FieldArray'
 import Skill from './form/Skill'
 import Weapon from './form/Weapon'
 
-import RichText from 'components/common/form/RichText'
-
 const UnitForm = ({unit, ...props}) => {
   return (
     <Block padding>
@@ -24,11 +22,6 @@ const UnitForm = ({unit, ...props}) => {
         {unit
         ? <h2>Edit {unit.name}</h2>
         : <h2>Add new unit</h2>}
-
-        <Field withRef
-          name='rte'
-          label='RTE'
-          component={RichText} />
 
         <Field
           name='faction'
