@@ -5,7 +5,6 @@ import Button from 'components/common/Button'
 import ButtonGroup from 'components/common/ButtonGroup'
 
 import Input from 'components/common/form/Input'
-import Textarea from 'components/common/form/Textarea'
 import RichText from 'components/common/form/RichText'
 
 const Skill = ({item, ...props}) => {
@@ -19,11 +18,11 @@ const Skill = ({item, ...props}) => {
         required
         small
         component={Input} />
-      <Field
+      {/* <Field
         name={`${item}.text`}
         label='Skill text'
         small
-        component={Textarea} />
+        component={Textarea} /> */}
 
       <Field withRef
         name={`${item}.textRte`}
