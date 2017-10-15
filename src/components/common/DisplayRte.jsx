@@ -16,8 +16,6 @@ class DisplayRte extends Component {
   }
 
   initialize = (value) => {
-    console.log(value)
-
     this.setState({
       ...this.state,
       editorState: value
@@ -34,11 +32,13 @@ class DisplayRte extends Component {
 
   render () {
     const {editorState} = this.state
-    const {text, ...props} = this.props
+    const {text, className, ...props} = this.props
     return editorState &&
-    <Editor readOnly
-      {...props}
-      editorState={editorState} />
+    (<div className={className}>
+      <Editor readOnly
+        {...props}
+        editorState={editorState} />
+      </div>)
   }
 }
 
