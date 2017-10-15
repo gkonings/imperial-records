@@ -13,11 +13,8 @@ import InputContainer from 'components/common/form/input/Container'
 import styles from './Input.module.scss'
 
 class RichText extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      editorState: null
-    }
+  state = {
+    editorState: null
   }
 
   componentDidMount () {
@@ -25,17 +22,7 @@ class RichText extends Component {
     this.initialize(input)
   }
 
-  componentWillUpdate (nextProps, nextState) {
-    const { form: lastForm } = this.props.meta
-    const { form } = nextProps.meta
-    if (form !== lastForm) {
-      this.initialize(nextProps.input)
-    }
-  }
-
   initialize = (input) => {
-    // console.log('init')
-    // console.log(input.value)
     this.setState({
       ...this.state,
       editorState: input.value

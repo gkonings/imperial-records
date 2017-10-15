@@ -24,7 +24,11 @@ const ManageUnits = ({manageUnits, match, location, ...props}) => {
       <Content area='content'>
         <Switch>
           <Route exact path={match.path} component={New} />
-          <Route path={`${match.path}:id`} component={Edit} />
+          <Route
+            path={`${match.path}:id`}
+            // will remount if component is used as function
+            component={props => <Edit {...props} />}
+            />
         </Switch>
 
       </Content>
